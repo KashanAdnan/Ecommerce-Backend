@@ -42,7 +42,7 @@ app.use(express.static(path.join(__dirname, "../frontend/build")))
 app.get("*" , (req,res) =>{
   res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
 })
-const server = app.listen(4000, () => {
+const server = app.listen(process.env.PORT, () => {
   console.log(`Server is Listing on Port 4000`.yellow);
 });
 
